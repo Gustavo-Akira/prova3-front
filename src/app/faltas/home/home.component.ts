@@ -33,4 +33,12 @@ export class HomeComponent implements OnInit {
   public relatorio(){
     this._router.navigate(['list', this.selected], {relativeTo: this.route});
   }
+
+  public pdf(){
+    this._router.navigate(['pdf',this.selected],{relativeTo: this.route});
+  }
+
+  public disabled() : boolean{
+    return this.selected.length == 0;
+  }
 }

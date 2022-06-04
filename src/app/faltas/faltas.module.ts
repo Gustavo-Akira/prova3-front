@@ -14,12 +14,15 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PdfComponent } from './pdf/pdf.component';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 @NgModule({
   declarations: [
     HomeComponent,
     ListComponent,
-    FormComponent
+    FormComponent,
+    PdfComponent
   ],
   imports: [
     CommonModule,
@@ -32,7 +35,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatNativeDateModule,
     MatInputModule,
     MatFormFieldModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    PdfViewerModule
   ]
 })
 export class FaltasModule { }

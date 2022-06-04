@@ -8,7 +8,8 @@
       </mat-select>
   </mat-form-field>
   <div class="row">
-    <button mat-raised-button color="primary" (click)="cadastrar()">Cadastrar</button>
-    <button mat-raised-button color="accent" (click)="relatorio()">Relatorio</button>
+    <button mat-raised-button color="primary" [disabled]="disabled()" (click)="cadastrar()">Cadastrar</button>
+    <button mat-raised-button color="accent" [disabled]="disabled()" (click)="relatorio()">Relatorio</button>
+    <a mat-raised-button color="basic" [disabled]="disabled()" target="_blank" href="{{'http://localhost:8080/rest/falta/relatorio/pdf/'+selected}}">PDF</a>
   </div>
 </div>

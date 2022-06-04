@@ -28,4 +28,8 @@ export class FaltaServiceService {
  public updateFaltas(id: number,falta: Falta): Observable<Falta> {
    return this.http.put<Falta>(this.baseUrl+'/'+id,JSON.stringify(falta));
  }
+
+ public getPdf(id: string): Observable<Blob>{
+  return this.http.get(this.baseUrl+'/relatorio/pdf/'+id,{responseType: 'blob'});
+ }
 }
