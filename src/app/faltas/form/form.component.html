@@ -1,0 +1,27 @@
+<form [formGroup]="reactiveForm" class="main-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Choose a date</mat-label>
+        <input formControlName="date" matInput [matDatepicker]="picker">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="picker">
+        </mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <ng-container *ngFor="let control of f">
+        <div class="row" [formGroup]="control">
+            <mat-form-field appearance="fill">
+                <mat-label>RA Aluno</mat-label>
+                <input formControlName="aluno" matInput placeholder="0-4">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Nome Aluno</mat-label>
+                <input formControlName="nome" matInput placeholder="0-4">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Numero de Faltas</mat-label>
+                <input formControlName="falta" matInput placeholder="0-4">
+            </mat-form-field>
+        </div>
+    </ng-container>
+    <button mat-raised-button (click)="submit()"> Cadastrar</button>
+</form>

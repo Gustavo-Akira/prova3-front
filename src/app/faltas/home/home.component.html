@@ -1,0 +1,14 @@
+<div class="container">
+  <mat-form-field appearance="fill">
+      <mat-label>Disciplinas</mat-label>
+      <mat-select [(value)]="selected">
+        <mat-option *ngFor="let disciplina of disciplinas" [value]="disciplina.codigo">
+          {{disciplina.nome}}
+        </mat-option>
+      </mat-select>
+  </mat-form-field>
+  <div class="row">
+    <button mat-raised-button color="primary" (click)="cadastrar()">Cadastrar</button>
+    <button mat-raised-button color="accent" (click)="relatorio()">Relatorio</button>
+  </div>
+</div>
